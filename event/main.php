@@ -185,7 +185,9 @@ class main implements EventSubscriberInterface
 		if (
 			in_array($event['post_mode'], ['edit_first_post', 'edit_topic', 'post'], true)
 			&&
-			$event['data']['topic_first_post_id'] == $event['data']['post_id']
+			// posting.php always sends both keys (0 for a new topic); other
+			// submit_post() callers may leave them out, so treat missing as 0.
+			($event['data']['topic_first_post_id'] ?? 0) == ($event['data']['post_id'] ?? 0)
 		)
 		{
 			$url = $this->request->variable('tlink', '', true);
