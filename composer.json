@@ -22,6 +22,6 @@
 		"display-name": "phpBB Studio - Topic links",
 		"soft-require": {
 			"phpbb/phpbb": ">=3.2.5,<4.00@dev"
-		},
+		}
 	}
 }
