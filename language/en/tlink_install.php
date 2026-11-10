@@ -16,5 +16,5 @@ if (empty($lang) || !is_array($lang))
 }
 
 $lang = array_merge($lang, array(
-	'TLINK_NOT_ENABLEABLE' => 'phpBB Studio - Topic links could not be enabled. It requires phpBB 3.3.19 or a later 3.3 release, and PHP 8.3.36 or later.',
+	'TLINK_NOT_ENABLEABLE' => 'phpBB Studio - Topic links could not be enabled. It requires phpBB 3.3.19 or a later 3.3 release, and PHP 8.1 or later.',
 ));
